@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags %}
+{{ self.title }}
+{% block content %}
+
+{#    {% for block in page.content %}#}
+{##}
+{#            <div class="page-content">#}
+{##}
+{#                <h2>{{ block.value.title }} </h2>#}
+{#                {{ block.value.text }}#}
+{#            </div>#}
+{##}
+{#    {% endfor %}#}
+    <h1>hi124</h1>
+   {% include 'home/welcome_page.html' %}
+
+{% endblock %}

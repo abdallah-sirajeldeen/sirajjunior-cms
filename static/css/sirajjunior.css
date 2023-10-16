@@ -1,0 +1,49 @@
+body {
+    font-family: 'Playfair Display', serif; /* Use Roboto for the body text */
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.homepage {
+    /*max-width: 800px;*/
+    margin: 50px auto;
+    /*padding: 20px;*/
+    background-color: #fff; /* White content background */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.homepage h1,
+.homepage h2 {
+    font-family: 'Playfair Display', serif; /* Use Lato for the headings */
+    margin-top: 0;
+    color: #0077b6; /* Darker blue for headings */
+}
+
+
+.homepage .introduction {
+    margin: 20px 0;
+    font-size: 1.2em;
+    /*padding: 30px;*/
+}
+
+.homepage .image img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Transition effect for hover scaling */
+}
+
+.homepage .date-published {
+    color: #777; /* Light gray for secondary text */
+    font-size: 0.9em;
+}
+
+/* Hover effect for the image to slightly scale it up */
+.homepage .image:hover img {
+    transform: scale(1.05);
+}
+

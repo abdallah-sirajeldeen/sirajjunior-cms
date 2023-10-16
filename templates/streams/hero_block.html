@@ -1,0 +1,32 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<section class="intro" data-component="section-intro">
+  <div class="inner">
+    <div id="cCover" class="c-cover c-cover-sustainability">
+      <div class="bottom-layer">
+        <div class="lazy-asset lazy-asset-mode-cover photo load-auto lazy-asset-load-when-in-viewport " data-anim="fade" data-aspect-ratio="1.4">
+          <div class="lazy-asset-wrapper">
+            <div class="lazy-asset-wrapper-overflow">
+              <picture>
+                {% image self.image fill-1080x1920 as image %}
+                <img data-srcset="{{ image.url }}"  alt="{{ self.title }}" data-src="{{ image.url }}">
+              </picture>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="top-layer js-top-layer" style="opacity: 1;">
+        <h2 class="main-heading">{{ self.title }}</h2>
+        <div class="bottom">
+          <div class="container">
+            <div class="row">
+              <div class="text">
+                  {{ self.description }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
