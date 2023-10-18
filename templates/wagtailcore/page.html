@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE HTML>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+    <head>
+        <title>{{ self.title }}</title>
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <link rel="stylesheet" href="{% static 'css/articles.css' %}">
+    </head>
+    <body>
+{#        <nav class="navbar-top" id="navbar-top">#}
+{#            <div class="site-name">MySite</div>#}
+{#            <div class="nav-items">#}
+{#                <span>Notifications</span>#}
+{#                <span>Messages</span>#}
+{#            </div>#}
+{#        </nav>#}
+{##}
+{#        <nav class="navbar-bottom" id="navbar-bottom">#}
+{#            <div>Category 1</div>#}
+{#            <div>Category 2</div>#}
+{#            <div>Category 3</div>#}
+{#            <!-- Add more categories as needed -->#}
+{#        </nav>#}
+
+        <div class="container">
+            <aside class="left-column">
+                <!-- Trending Articles Here -->
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+                <h2>Trending Articles</h2>
+            </aside>
+
+                <main class="middle-column">
+                    <!-- Article Form on top -->
+                    <div class="article-form">
+                        <!-- Your form goes here -->
+                        <h2>Post an Article</h2>
+                    </div>
+
+                        <!-- News Feed Below -->
+                    <div class="news-feed">
+                        <!-- Your news feed content goes here -->
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+                        <h2>News Feed</h2>
+
+                    </div>
+                </main>
+
+                    <aside class="right-column">
+                    <!-- Trending Series of Articles Here -->
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                    <h2>Trending Series</h2>
+                </aside>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{#        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>#}
+        <script src="{% static 'js/articles.js' %}"></script>
+</body>
+</html>

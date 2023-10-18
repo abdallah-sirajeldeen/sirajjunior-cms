@@ -1,21 +1,38 @@
 {% load static %}
-    {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    {% endblock %}
+{% load wagtailimages_tags %}
 
 
-<div class="container-card">
-<h1 class="text-center">{{ self.title }}</h1>
-{%  for card in self.cards %}
-<figure>
-    <img class="card-img-top" src="https://picsum.photos/id/287/250/300" alt="Mountains">
-    <button class="btn btn-primary btn-sm text-center mt-lg-1 m-auto">Go!</button>
-</figure>
-{#<figure style="--c:#fff5">#}
-{#    <img src="https://picsum.photos/id/475/250/300" alt="Mountains">#}
-{#    <figcaption>The Night</figcaption>#}
-{#</figure>#}
+{% block content %}
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
+        gap: 16px;  /* space between cards */
+    }
+    .card {
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
 
-{% endfor %}
+<div class="grid">
+    {% for card in self.cards %}
+        {% image card.image fill-800x600 as src %}
+    <div class="card">
+        {% if src %}
+        <img src="{{src.url }}" alt="{{ card.title }}">
+        {% endif %}
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.text }}</p>
+    </div>
+    {% endfor %}
 </div>
+{% endblock %}
 

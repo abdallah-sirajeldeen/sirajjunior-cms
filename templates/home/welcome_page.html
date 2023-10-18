@@ -2,28 +2,28 @@
 {% load static wagtailcore_tags wagtailimages_tags %}  {# Load required tags for wagtail #}
 
 {% block content %}
-<div class="homepage">
+<div class="homepage container mt-5"> {# .container for content centering and .mt-5 for some top margin #}
 
-    <h1>{{ page.title }}</h1>  {# Display the Page's title, which is inherited from the Page model #}
-<h1>hi</h1>
+    <h1 class="display-4 text-center">{{ page.title }}</h1>  {# Display the Page's title with a larger, center-aligned font #}
+
     {% if page.introduction %}
-        <div class="introduction">
-            {{ page.introduction }}
+        <div class="introduction my-4"> {# .my-4 for some vertical margin #}
+            <p class="lead">{{ page.introduction }}</p> {# .lead for a larger font size for introductory text #}
         </div>
     {% endif %}
 
     {% if page.subtitle %}
-        <h2>{{ page.subtitle }}</h2>
+        <h2 class="h4 text-muted text-center my-3">{{ page.subtitle }}</h2> {# .h4 for a smaller header size, .text-muted for a light color, .text-center for center alignment and .my-3 for some vertical margin #}
     {% endif %}
 
     {% if page.image %}
-        <div class="image">
-            {% image page.image fill-800x600 %} {# Using Wagtail's image tag to display and optionally resize the image #}
+        <div class="image text-center my-4"> {# .text-center to center the image and .my-4 for some vertical margin #}
+            {% image page.image fill-800x600 class="img-fluid rounded" %} {# .img-fluid to make the image responsive, .rounded for rounded corners #}
         </div>
     {% endif %}
 
     {% if page.date_published %}
-        <div class="date-published">
+        <div class="date-published text-muted mb-3"> {# .text-muted for a light color and .mb-3 for some bottom margin #}
             Published on: {{ page.date_published|date:"F j, Y" }} {# Format the date for better readability #}
         </div>
     {% endif %}
